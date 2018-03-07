@@ -145,8 +145,8 @@ var sortState = [
   { id: -9, description: 'i this is not done', done: false },
 ];
 
-test('Function should return sorted array 1. by done status, 2. by alphabetical order', function(t){
-  var actual = logic.sortTodos(sortState);
+test('Function should return array sorted by done status', function(t){
+  var actual = logic.sortTodos(sortState, (a, b) => a.done - b.done);
   var expected = [
 	  { id: -1, description: 'a this is not done', done: false },
 	  { id: -3, description: 'c this is not done', done: false },
@@ -158,19 +158,19 @@ test('Function should return sorted array 1. by done status, 2. by alphabetical 
 	  { id: -6, description: 'f this is done', done: true },
 	  { id: -8, description: 'h this is done', done: true },
   ];
-  t.deepEquals(actual, expected, 'Should return sorted array 1. by done status, 2. by alphabetical order, instead got: ' + actual);
+  t.deepEquals(actual, expected, 'Should return array sorted by done status, instead got: ' + actual);
   t.end()
 });
 
 test('Function should return array of same length as input array', function(t){
-  var actual = logic.sortTodos(sortState).length;
+  var actual = logic.sortTodos(sortState, (a, b) => a.done - b.done).length;
   var expected = sortState.length;
   t.deepEquals(actual, expected, 'Function should return array of same length as input array, instead got : ' + actual);
   t.end()
 });
 
 test('Function should return array', function(t){
-  var actual = Array.isArray(logic.sortTodos(sortState));
+  var actual = Array.isArray(logic.sortTodos(sortState, (a, b) => a.done - b.done));
   var expected = true;
   t.deepEquals(actual, expected, 'Function should return array, instead got : ' + actual);
   t.end()

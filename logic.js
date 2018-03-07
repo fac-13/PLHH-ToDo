@@ -70,8 +70,7 @@ var todoFunctions = {
   sortTodos: function(todos, sortFunction) {
     
     var todosCopy = this.cloneArrayOfObjects(todos);
-    console.log(todosCopy);
-    return todosCopy;
+    return todosCopy.sort(sortFunction);
 
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
