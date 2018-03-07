@@ -31,7 +31,7 @@ var todoFunctions = {
   },
   deleteTodo: function(todos, idToDelete) {
     if (todos.length === 1) {
-      return '';
+      return [];
     }
     var todosCopy = this.cloneArrayOfObjects(todos);
     return todosCopy.filter(function(item) {
