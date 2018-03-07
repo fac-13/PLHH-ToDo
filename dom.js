@@ -13,21 +13,32 @@
   ]; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
-  var createTodoNode = function(todo) {
+  var createTodoNode = function(item) {
     var todoNode = document.createElement('li');
     // you will need to use addEventListener
 
     // add span holding description
-
+    var descriptionSpan = document.createElement('span');
+    descriptionSpan.appendChild(document.createTextNode(item.description));
+    todoNode.appendChild(descriptionSpan);
+    
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
     deleteButtonNode.addEventListener('click', function(event) {
-      var newState = todoFunctions.deleteTodo(state, todo.id);
+      var newState = todoFunctions.deleteTodo(state, item.id);
       update(newState);
     });
+    deleteButtonNode.classList.add('button__delete');
     todoNode.appendChild(deleteButtonNode);
 
     // add markTodo button
+    var markToDoButton = document.createElement('button');
+    markToDoButton.addEventListener('click', function(event) {
+      var newState = todoFunctions.markTodo(state, item.id);
+      update(newState);
+    });
+    markToDoButton.classList.add('button__done');
+    todoNode.appendChild(markToDoButton);
 
     // add classes for css
 
@@ -59,8 +70,8 @@
   var renderState = function(state) {
     var todoListNode = document.createElement('ul');
 
-    state.forEach(function(todo) {
-      todoListNode.appendChild(createTodoNode(todo));
+    state.forEach(function(item) {
+      todoListNode.appendChild(createTodoNode(item));
     });
 
     // you may want to add a class for css
