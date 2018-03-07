@@ -92,7 +92,44 @@ test('If input array length == 1, resulting array length should == 0', function(
   t.end()
 });
 
+// TESTS FOR MARKTODO
 
+test('Function should toggle item id=-1 from false to true', function(t){
+  var actual = logic.markTodo(state, -1);
+  var expected = [
+    { id: -3, description: 'first todo', done: false },
+    { id: -2, description: 'second todo', done: false },
+    { id: -1, description: 'third todo', done: true },
+  ];
+  t.deepEquals(actual, expected, 'Function should toggle item id=-1 from false to true, instead got : ' + actual);
+  t.end()
+});
+
+test('Function should toggle item id=-3 from false to true', function(t){
+  var actual = logic.markTodo(state, -3);
+  var expected = [
+    { id: -3, description: 'first todo', done: true },
+    { id: -2, description: 'second todo', done: false },
+    { id: -1, description: 'third todo', done: false },
+  ];
+  t.deepEquals(actual, expected, 'Function should toggle item id=-3 from false to true, instead got : ' + actual);
+  t.end()
+});
+
+test('Function should toggle item id=-3 from true to false', function(t){
+  var actual = logic.markTodo([
+    { id: -3, description: 'first todo', done: true },
+    { id: -2, description: 'second todo', done: false },
+    { id: -1, description: 'third todo', done: false },
+  ], -3);
+  var expected = [
+    { id: -3, description: 'first todo', done: false },
+    { id: -2, description: 'second todo', done: false },
+    { id: -1, description: 'third todo', done: false },
+  ];
+  t.deepEquals(actual, expected, 'Function should toggle item id=-3 from true to false, instead got : ' + actual);
+  t.end()
+});
 
 // TESTS FOR SORT FUNCTION
 
@@ -138,3 +175,4 @@ test('Function should return array', function(t){
   t.deepEquals(actual, expected, 'Function should return array, instead got : ' + actual);
   t.end()
 });
+
