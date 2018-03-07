@@ -106,7 +106,7 @@ test('Function should toggle item id=-1 from false to true', function(t){
 });
 
 test('Function should toggle item id=-3 from false to true', function(t){
-  var actual = logic.markTodo(state, -1);
+  var actual = logic.markTodo(state, -3);
   var expected = [
     { id: -3, description: 'first todo', done: true },
     { id: -2, description: 'second todo', done: false },
