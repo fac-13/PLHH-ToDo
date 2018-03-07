@@ -91,3 +91,50 @@ test('If input array length == 1, resulting array length should == 0', function(
   t.deepEquals(actual, expected, 'If input array length == 1, resulting array length should == 0, instead got : ' + actual);
   t.end()
 });
+
+
+
+// TESTS FOR SORT FUNCTION
+
+var sortState = [
+  { id: -1, description: 'a this is not done', done: false },
+  { id: -2, description: 'b this is done', done: true },
+  { id: -3, description: 'c this is not done', done: false },
+  { id: -4, description: 'd this is not done', done: false },
+  { id: -5, description: 'e this is done', done: true },
+  { id: -6, description: 'f this is done', done: true },
+  { id: -7, description: 'g this is not done', done: false },
+  { id: -8, description: 'h this is done', done: true },
+  { id: -9, description: 'i this is not done', done: false },
+];
+
+test('Function should return sorted array 1. by done status, 2. by alphabetical order', function(t){
+  var actual = logic.sortTodos(sortState);
+  var expected = [
+	  { id: -1, description: 'a this is not done', done: false },
+	  { id: -3, description: 'c this is not done', done: false },
+	  { id: -4, description: 'd this is not done', done: false },
+	  { id: -7, description: 'g this is not done', done: false },
+	  { id: -9, description: 'i this is not done', done: false },
+	  { id: -2, description: 'b this is done', done: true },
+	  { id: -5, description: 'e this is done', done: true },
+	  { id: -6, description: 'f this is done', done: true },
+	  { id: -8, description: 'h this is done', done: true },
+  ];
+  t.deepEquals(actual, expected, 'Should return sorted array 1. by done status, 2. by alphabetical order, instead got: ' + actual);
+  t.end()
+});
+
+test('Function should return array of same length as input array', function(t){
+  var actual = logic.sortTodos(sortState).length;
+  var expected = sortState.length;
+  t.deepEquals(actual, expected, 'Function should return array of same length as input array, instead got : ' + actual);
+  t.end()
+});
+
+test('Function should return array', function(t){
+  var actual = Array.isArray(logic.sortTodos(sortState));
+  var expected = true;
+  t.deepEquals(actual, expected, 'Function should return array, instead got : ' + actual);
+  t.end()
+});
