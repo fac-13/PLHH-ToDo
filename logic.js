@@ -23,11 +23,21 @@ var todoFunctions = {
     });
   },
   
-  addTodo: function(todos, newTodo) {
+  addTodo: function(todos, description) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
+    // var copyOfTodo = this.cloneArrayOfObjects(todos);
+    var newTodo = {
+      id: this.generateId(),
+      description: description,
+      done: false
+    };
+    // copyOfTodo.push(newTodo)
+    var copyOfTodo = todos.concat(newTodo);
+
+    return copyOfTodo;
   },
   deleteTodo: function(todos, idToDelete) {
     if (todos.length === 1) {
