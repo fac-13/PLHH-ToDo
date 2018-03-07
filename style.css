@@ -7,3 +7,8 @@
     padding: 1rem;
     background-color: green;
 }
+
+.marked-done {
+    text-decoration: line-through;
+    background-color: blue;
+}
