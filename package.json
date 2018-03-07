@@ -1,0 +1,25 @@
+{
+  "name": "plhh-todo",
+  "version": "1.0.0",
+  "description": "To Do app",
+  "main": "dom.js",
+  "scripts": {
+    "test": "nyc tape test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-13/PLHH-ToDo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-13/PLHH-ToDo/issues"
+  },
+  "homepage": "https://github.com/fac-13/PLHH-ToDo#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.1",
+    "nyc": "^11.4.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.9.0"
+  }
+}
