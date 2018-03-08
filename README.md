@@ -16,7 +16,7 @@ ALSO we have managed to complete some **stretch goals**! 🎖
 
 Stretch goals we discussed for the future:
 - [ ] Edit the to-dos so that the user can amend them if the task changes
-- [ ] click on any part of a to-do to mark it as complete so that it's easier for them to check to-dos off
+- [ ] Click on any part of a to-do to mark it as complete so that it's easier for them to check to-dos off
 - [ ] Conditional sort button: only show the sort by doneness button if to do has more than two items
 - [ ] Mark items with high/medium/low priority and sort by priority
 - [ ] Animations
@@ -25,7 +25,7 @@ Stretch goals we discussed for the future:
 ## How we've done it
 
 ### Day one
-Before lunch: we all reviewed the skeleton code 💀to try and make sense of it. We decided we would try to tackle the logic.js tasks before the end of the day.
+Before lunch: we all reviewed the skeleton code 💀to try and make sense of it. One person made the remote git repo, uploaded the skeleton code, did `npm install` and updated the `package.json` file. We then decided we would try to tackle the logic.js tasks before the end of the day.
 
 Our group split up into two pairs and one pair focused on the ```addTodo``` function, whilst the other pair focused on the `deleteTodo` function. After we finished, we explained what we did to the other pair. We used the TDD methodology and tried to include edge casees too 👍
 
@@ -42,3 +42,11 @@ Before lunch we completed the tasks and did a code review 🤜🤛
 After lunch we switched the pairs around again. One pair focused on the CSS styling and HTML refactoring (so that we had an 💯 accessibility score), whilst the other pair focused on making sort-by button, and linking the sortby function in logic.js to the DOM. The latter pair also completed the stretch goal involving local storage (involving re-writing the function that generated id's to prevent duplicate id's after refresh.)
 
 At the end of the day we explained all the code to each other, made sure the main issues were resolved and there were no merge conflicts, and high-fived 👋
+
+## What we did well
+- TDD methodology, we kept to a strict concept of doing the tests first before writing the functions
+- Pair switch up, we managed to switch up who we were working with frequently
+- Using git, we made very specific issues, made branches for them and after the issue was complete we merged the branch, deleted the branch and closed the issue. This meant we hardly had any merge conflicts, the remote code was regularly updated, and the number of issues and branches were kept under control.
+- We decided to work from a develop branch - and smaller branches would be merged into the develop branch. Only on the final hour did we merge the develop branch into the master branch.
+- We regularly met up and explained the code to each other.
+- Everyone would review and approve the pull request before the last person to review would merged the branch.
