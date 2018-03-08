@@ -15,12 +15,12 @@ ALSO we have managed to complete some **stretch goals**! 🎖
 - [x] A sort by button: which sorts the to-dos still needed to be done (and the to-dos marked as done is shuffled to the bottom)
 
 Stretch goals we discussed for the future:
-- [] edit the to-dos so that the user can amend them if the task changes
-- [] click on any part of a to-do to mark it as complete so that it's easier for them to check to-dos off
-- [] Conditional sort button: only show the sort by doneness button if to do has more than two items
-- [] Mark items with high/medium/low priority and sort by priority
-- [] Animations
-- [] Have CSS/JS for when there are no to-do items
+- [ ] Edit the to-dos so that the user can amend them if the task changes
+- [ ] click on any part of a to-do to mark it as complete so that it's easier for them to check to-dos off
+- [ ] Conditional sort button: only show the sort by doneness button if to do has more than two items
+- [ ] Mark items with high/medium/low priority and sort by priority
+- [ ] Animations
+- [ ] Have CSS/JS for when there are no to-do items
 
 ## How we've done it
 
