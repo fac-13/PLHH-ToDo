@@ -14,45 +14,60 @@ var todoFunctions = {
 
     return incrementCounter;
   })(),
-  
-  //cloneArrayOfObjects will create a copy of the todos array 
+
+  //cloneArrayOfObjects will create a copy of the todos array
   //changes to the new array don't affect the original
   cloneArrayOfObjects: function(todos) {
-    return todos.map(function(todo){
+    return todos.map(function(todo) {
       return JSON.parse(JSON.stringify(todo));
     });
   },
-  
-  addTodo: function(todos, newTodo) {
+
+  addTodo: function(todos, description) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
-    // hint: array.concat
+    var newTodo = {
+      id: this.generateId(),
+      description: description,
+      done: false
+    };
+    var copyOfTodo = todos.concat(newTodo);
+    return copyOfTodo;
   },
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
-    // hint: array.filter
+    var todosCopy = this.cloneArrayOfObjects(todos);
+    return todosCopy.filter(function(item) {
+      if (item.id !== idToDelete) return item;
+    });
   },
   markTodo: function(todos, idToMark) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
-    // hint: array.map
+    var todosCopy = this.cloneArrayOfObjects(todos);
+    return todosCopy.map(function(item) {
+      if (item.id === idToMark) {
+        item.done = !item.done;
+      }
+      console.log(todos);
+      return item;
+    });
   },
   sortTodos: function(todos, sortFunction) {
-    // stretch goal! Do this last
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
     // sortFunction will have same signature as the sort function in array.sort
-    // hint: array.slice, array.sort
-  },
+    var todosCopy = this.cloneArrayOfObjects(todos);
+    return todosCopy.sort(sortFunction);
+  }
 };
-
 
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
-// See this article for more details: 
+// See this article for more details:
 // http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/
-if (typeof module !== 'undefined') {
+if (typeof module !== "undefined") {
   module.exports = todoFunctions;
 }
