@@ -14,6 +14,14 @@ ALSO we have managed to complete some **stretch goals**! 🎖
 - [x] Local storage as been used so even if the user refreshes the page they can still see their todos
 - [x] A sort by button: which sorts the to-dos still needed to be done (and the to-dos marked as done is shuffled to the bottom)
 
+Stretch goals we discussed for the future:
+- [] edit the to-dos so that the user can amend them if the task changes
+- [] click on any part of a to-do to mark it as complete so that it's easier for them to check to-dos off
+- [] Conditional sort button: only show the sort by doneness button if to do has more than two items
+- [] Mark items with high/medium/low priority and sort by priority
+- [] Animations
+- [] Have CSS/JS for when there are no to-do items
+
 ## How we've done it
 
 ### Day one
@@ -23,7 +31,7 @@ Our group split up into two pairs and one pair focused on the ```addTodo``` func
 
 After that we switched our pairs around, and one pair completed the tasks on logic.js (including the `markTodo` and `sortTodos` functions). The other pair worked on the DOM.js file. They worked on the `createTodoNode` function, and managed to create a `li` item with the appropriate description inside, that also had a delete and marked-done button.
 
-By the end of the day we managed to complete our tasks and then walk through the code with the other pair 👏
+By the end of the day we managed to complete our tasks and then walked through the code with the other pair 👏
 
 ### Day two
 We looked at the project and made several issues that we thought were important to complete.
@@ -31,6 +39,6 @@ One pair focused on trying to solve a major bug, where we couldn't mark an item 
 The other pair refactored the logic.js file, and added more tests (including, importantly, the test to check whether the functions would change global variables or not - to ensure they were pure functions).
 Before lunch we completed the tasks and did a code review 🤜🤛
 
-After lunch we switched the pairs around again. One pair focused on the CSS styling and HTML refactoring (so that we had an 100% accessibility score), whilst the other pair focused on making sort-by button, and linking the sortby function in logic.js to the DOM. The latter pair also completed the stretch goal involving local storage (involving re-writing the function that generated id's to prevent duplicate id's after refresh.)
+After lunch we switched the pairs around again. One pair focused on the CSS styling and HTML refactoring (so that we had an 💯 accessibility score), whilst the other pair focused on making sort-by button, and linking the sortby function in logic.js to the DOM. The latter pair also completed the stretch goal involving local storage (involving re-writing the function that generated id's to prevent duplicate id's after refresh.)
 
 At the end of the day we explained all the code to each other, made sure the main issues were resolved and there were no merge conflicts, and high-fived 👋
