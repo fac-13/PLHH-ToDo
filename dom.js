@@ -6,7 +6,16 @@
   var container = document.getElementById('todo-container');
   var addTodoForm = document.getElementById('add-todo');
 
-  var state = [];
+  var state = JSON.parse(localStorage.getItem('state')) || [];
+
+  var highestId = 0;
+  // get highest id of states
+  if (state.length > 0) {
+    var copyOfState = [...state];
+    var lastTodoItem = copyOfState.sort((a, b) => a.id - b.id).pop()
+    highestId = lastTodoItem.id;
+  }
+  
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(item) {
@@ -56,8 +65,9 @@
   // 
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
-      event.preventDefault();   
-      var newState = todoFunctions.addTodo(state, event.target[0].value);
+      event.preventDefault(); 
+      highestId++; // increment id of new node to be created
+      var newState = todoFunctions.addTodo(state, event.target[0].value, highestId);
       this.reset(); // clears from
       update(newState);
     });
@@ -66,6 +76,7 @@
   // you should not need to change this function
   var update = function(newState) {
     state = newState;
+    localStorage.setItem('state', JSON.stringify(state));
     renderState(state);
   };
 
