@@ -9,12 +9,11 @@
   var state = JSON.parse(localStorage.getItem('state')) || [];
 
   var highestId = 0;
-  // fix
+  // get highest id of states
   if (state.length > 0) {
     var copyOfState = [...state];
-    highestId = copyOfState.sort((a, b) => a.id - b.id).pop().id;
-    console.log(hightestID);
-    // todoFunctions.startID(hightestID);
+    var lastTodoItem = copyOfState.sort((a, b) => a.id - b.id).pop()
+    highestId = lastTodoItem.id;
   }
   
 
@@ -52,7 +51,8 @@
  
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
-      event.preventDefault();   
+      event.preventDefault(); 
+      highestId++; // increment id of new node to be created
       var newState = todoFunctions.addTodo(state, event.target[0].value, highestId);
       this.reset(); // clears from
       update(newState);

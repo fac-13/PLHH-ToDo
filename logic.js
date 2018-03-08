@@ -8,16 +8,16 @@ var todoFunctions = {
   // startID: function(x) {
   //   return x;
   // },
-  generateId: (function() {
-    var idCounter = 0;
+  // generateId: (function() {
+  //   var idCounter = 0;
 
-    function incrementCounter(x) {
-      if (x) idCounter = x;
-      return (idCounter += 1);
-    }
+  //   function incrementCounter(x) {
+  //     if (x) idCounter = x;
+  //     return (idCounter += 1);
+  //   }
 
-    return incrementCounter;
-  })(),
+  //   return incrementCounter;
+  // })(),
   
   //cloneArrayOfObjects will create a copy of the todos array 
   //changes to the new array don't affect the original
@@ -34,7 +34,7 @@ var todoFunctions = {
     // hint: array.concat
     // var copyOfTodo = this.cloneArrayOfObjects(todos);
     var newTodo = {
-      id: this.generateId(start),
+      id: start,
       description: description,
       done: false
     };
