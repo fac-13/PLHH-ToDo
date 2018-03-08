@@ -1,0 +1,169 @@
+@import url("https://rsms.me/inter/inter-ui.css");
+/****RESET STYLE******/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  /* border:  1px solid black; */
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/****body styles ****/
+
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  font-family: "Inter UI", sans-serif;
+  background-color: rgba(236, 204, 104, 0.5);
+  color: #2f3542;
+}
+
+/* button styles */
+
+.marked-done {
+  text-decoration: line-through;
+}
+
+.inner-wrapper {
+  width: 100%;
+  position: absolute;
+  margin-top: 4rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: translateX(-50%);
+  /* IE 9 */
+  transform: translateX(-50%);
+  /* IE 10, Fx 16+, Op 12.1+ */
+  padding: 3em;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  background: #eccc68;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  word-wrap: break-word;
+}
+
+li span {
+  max-width: 60%;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.button__delete,
+.button__done {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  background: #ff7f50;
+  margin-top: 0.5rem;
+  border: none;
+  padding: 1rem;
+}
+
+.button__done::after {
+  position: absolute;
+  content: "✔️";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: translateX(-50%) translateY(-50%);
+  /* IE 9 */
+  transform: translateX(-50%) translateY(-50%);
+  /* IE 10, Fx 16+, Op 12.1+ */
+}
+
+.button__delete::after {
+  position: absolute;
+  content: "❌";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: translateX(-50%) translateY(-50%);
+  /* IE 9 */
+  transform: translateX(-50%) translateY(-50%);
+  /* IE 10, Fx 16+, Op 12.1+ */
+}
+
+.list {
+  width: 100%;
+  background: #eccc68;
+  display: flex;
+  position: relative;
+}
+
+.list__input {
+  background: transparent;
+  margin-right: auto;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  margin-right: 6rem;
+  font-size: 1rem;
+}
+
+.list__submit {
+  position: absolute;
+  background: #ff7f50;
+  color: #2f3542;
+  right: 0.4rem;
+  border: none;
+  width: 5rem;
+  padding: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: translateY(-50%);
+  /* IE 9 */
+  transform: translateY(-50%);
+  /* IE 10, Fx 16+, Op 12.1+ */
+  height: 2.5rem;
+  line-height: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+.button__sortby button {
+    background-color: #ff7f50;
+    color: #2f3542;
+    border: none;
+    float: right;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+}
+
+.heading {
+    float: left;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .inner-wrapper {
+    max-width: 50%;
+  }
+}

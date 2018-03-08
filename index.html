@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>tdd todo</title>
     <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta name="description" content="FAC second week project" />
+    <meta name="keywords" content="TO DO, application, TDD, testing" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="PLHH: Parissa, Helen, Haydn, Lawrence" />
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
   </head>
   <body>
+    <main class="inner-wrapper">
+    <h1 class="heading">To Do</h1>
+    <span id="js-sortby" class="button__sortby"></span>
+
+    <label aria-label="To Do List">
+        <form id="add-todo" class="list">
+          <input class="list__input" type="text" for="add-todo" name="description" required>
+          <input class="list__submit" type="submit" for="add-todo" value="Submit">
+        </form>
+    </label>
+
+    
     <div id = "todo-container">
         <ul>
         </ul>
     </div>
-    <form id="add-todo">
-      <input type="text" name="description" value="">
-      <input type="submit" name="" value="Submit">
-    </form>
+    
+</main>
   </body>
   <script type="text/javascript" src = "./logic.js"></script>
   <script type="text/javascript" src = "./dom.js"></script>
