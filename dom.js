@@ -39,7 +39,20 @@
 
     return todoNode;
   };
+
+  // this creates a sort button and appends it to the form element
+  var createSortButton = function() {
+    var sortItems = document.createElement('button');
+    sortItems.appendChild(document.createTextNode('order by doneness'));
+    sortItems.addEventListener('click', function(event) {
+      event.preventDefault();
+      var newState = todoFunctions.sortTodos(state, (a, b) => b.done - a.done);
+      update(newState);
+    });
+    addTodoForm.appendChild(sortItems);
+  }
  
+  // 
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
       event.preventDefault();   
@@ -78,5 +91,9 @@
     });
   };
 
-  if (container) renderState(state);
+
+  if (container) {
+    renderState(state);
+    createSortButton();
+  }
 })();
