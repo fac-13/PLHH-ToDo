@@ -48,9 +48,8 @@
  
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      var description = document.querySelector("input[name='description']").value; 
-      var newState = todoFunctions.addTodo(state, description);
+      event.preventDefault();   
+      var newState = todoFunctions.addTodo(state, event.target[0].value);
       this.reset(); // clears from
       update(newState);
     });
