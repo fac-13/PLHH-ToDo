@@ -1,3 +1,31 @@
+@import url("https://rsms.me/inter/inter-ui.css");
+/****RESET STYLE******/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/****body styles ****/
+
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  font-family: "Inter UI", sans-serif;
+  background-color: rgba(236, 204, 104, .5);
+  color: #2f3542;
+}
+
+/* button styles */
+
 .button__delete {
     padding: 1rem;
     background-color: red;
@@ -11,4 +39,8 @@
 .marked-done{
     text-decoration: line-through;
     background-color: blue;
+}
+
+.heading {
+
 }
