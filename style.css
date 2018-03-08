@@ -146,6 +146,7 @@ li span {
 
 .button__sortby button {
     background-color: #ff7f50;
+    cursor: pointer;
     color: #2f3542;
     border: none;
     float: right;
