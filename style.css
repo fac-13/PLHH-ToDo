@@ -1,0 +1,14 @@
+.button__delete {
+    padding: 1rem;
+    background-color: red;
+}
+
+.button__done {
+    padding: 1rem;
+    background-color: green;
+}
+
+.marked-done {
+    text-decoration: line-through;
+    background-color: blue;
+}
