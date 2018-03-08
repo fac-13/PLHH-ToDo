@@ -15,7 +15,7 @@
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(item) {
     var todoNode = document.createElement('li');
-    todoNode.setAttribute('id', 'js-buttonDone');
+    // todoNode.setAttribute('id', 'js-buttonDone');
     // you will need to use addEventListener
 
     // add span holding description
