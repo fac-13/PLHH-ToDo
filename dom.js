@@ -53,7 +53,7 @@
   // this creates a sort button and appends it to the form element
   var createSortButton = function() {
     var sortItems = document.createElement('button');
-    sortItems.appendChild(document.createTextNode('order by doneness'));
+    sortItems.appendChild(document.createTextNode('Sort by uncomplete'));
     sortItems.addEventListener('click', function(event) {
       event.preventDefault();
       var newState = todoFunctions.sortTodos(state, (a, b) => a.done - b.done);

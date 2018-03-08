@@ -75,6 +75,7 @@ li span {
   background: #ff7f50;
   margin-top: 0.5rem;
   border: none;
+  cursor: pointer;
   padding: 1rem;
 }
 
@@ -122,6 +123,7 @@ li span {
 }
 
 .list__submit {
+  cursor: pointer;
   position: absolute;
   background: #ff7f50;
   color: #2f3542;
@@ -157,9 +159,13 @@ li span {
     float: left;
     margin-bottom: 3rem;
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
     font-size: 1.5rem;
     padding-top: 1rem;
+}
+
+button:hover, input:hover {
+  opacity: .85;
 }
 
 @media screen and (min-width: 700px) {
