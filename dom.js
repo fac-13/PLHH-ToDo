@@ -48,7 +48,7 @@
     todoNode.appendChild(markToDoButton);
 
     return todoNode;
-  };
+  };  
 
   // this creates a sort button and appends it to the form element
   var createSortButton = function() {
@@ -56,10 +56,10 @@
     sortItems.appendChild(document.createTextNode('order by doneness'));
     sortItems.addEventListener('click', function(event) {
       event.preventDefault();
-      var newState = todoFunctions.sortTodos(state, (a, b) => b.done - a.done);
+      var newState = todoFunctions.sortTodos(state, (a, b) => a.done - b.done);
       update(newState);
     });
-    addTodoForm.appendChild(sortItems);
+    document.getElementById('js-sortby').appendChild(sortItems);
   }
  
   // 
