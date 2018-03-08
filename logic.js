@@ -68,6 +68,10 @@ var todoFunctions = {
     // hint: array.map
   },
   sortTodos: function(todos, sortFunction) {
+    
+    var todosCopy = this.cloneArrayOfObjects(todos);
+    return todosCopy.sort(sortFunction);
+
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
     // sortFunction will have same signature as the sort function in array.sort
