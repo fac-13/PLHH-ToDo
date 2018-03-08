@@ -56,7 +56,7 @@
     sortItems.appendChild(document.createTextNode('order by doneness'));
     sortItems.addEventListener('click', function(event) {
       event.preventDefault();
-      var newState = todoFunctions.sortTodos(state, (a, b) => b.done - a.done);
+      var newState = todoFunctions.sortTodos(state, (a, b) => a.done - b.done);
       update(newState);
     });
     document.getElementById('js-sortby').appendChild(sortItems);

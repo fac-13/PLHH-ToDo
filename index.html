@@ -15,17 +15,21 @@
     <main class="inner-wrapper">
     <h1 class="heading">To Do</h1>
     <span id="js-sortby" class="button__sortby"></span>
+
+    <label aria-label="To Do List">
+        <form id="add-todo" class="list">
+          <input class="list__input" type="text" for="add-todo" name="description" required>
+          <input class="list__submit" type="submit" for="add-todo" value="Submit">
+        </form>
+    </label>
+
+    
     <div id = "todo-container">
         <ul>
         </ul>
     </div>
     
-  <label aria-label="To Do List">
-      <form id="add-todo" class="list">
-        <input class="list__input" type="text" for="add-todo" name="description" required>
-        <input class="list__submit" type="submit" for="add-todo" value="Submit">
-      </form>
-  </label></main>
+</main>
   </body>
   <script type="text/javascript" src = "./logic.js"></script>
   <script type="text/javascript" src = "./dom.js"></script>
