@@ -46,17 +46,12 @@
     return todoNode;
   };
  
-  // bind create todo form
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
-      // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-      // what does event.preventDefault do?
-      // what is inside event.target?
-
-      var description = '?'; // event.target ....
-
-      // hint: todoFunctions.addTodo
-      var newState = []; // ?? change this!
+      event.preventDefault();
+      var description = document.querySelector("input[name='description']").value; 
+      var newState = todoFunctions.addTodo(state, description);
+      this.reset(); // clears from
       update(newState);
     });
   }
