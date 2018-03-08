@@ -15,7 +15,7 @@ test("Testing Tape is working", function(t) {
 // TESTS FOR ADD FUNCTION
 test("addTodo", function(t) {
   var description = "this as a todo";
-  var actual = logic.addTodo(state, description);
+  var actual = logic.addTodo(state, description, 1);
   var expected = [
     { id: -3, description: "first todo", done: false },
     { id: -2, description: "second todo", done: false },
