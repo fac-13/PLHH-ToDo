@@ -12,6 +12,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
   </head>
   <body>
+    <main class="inner-wrapper">
     <h1 class="heading">To Do List</h1>
     <div id = "todo-container">
         <ul>
@@ -19,13 +20,12 @@
     </div>
     
   <label aria-label="To Do List">
-      <form id="add-todo" class="test">
-        <input type="text" for="add-todo" name="description" required>
-        <input type="submit" for="add-todo" value="Submit">
+      <form id="add-todo" class="list">
+        <input class="list__input" type="text" for="add-todo" name="description" required>
+        <input class="list__submit" type="submit" for="add-todo" value="Submit">
       </form>
-  </label>
+  </label></main>
   </body>
   <script type="text/javascript" src = "./logic.js"></script>
   <script type="text/javascript" src = "./dom.js"></script>
-  <script type="text/javascript" src = "./other.js"></script>
 </html>

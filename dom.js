@@ -12,6 +12,7 @@
   var createTodoNode = function(item) {
     var todoNode = document.createElement('li');
     todoNode.setAttribute('id', item.id);
+    todoNode.setAttribute('class', 'clearfix');
 
     // add span holding description
     var descriptionSpan = document.createElement('span');
