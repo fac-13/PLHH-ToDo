@@ -157,9 +157,13 @@ li span {
     float: left;
     margin-bottom: 3rem;
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
     font-size: 1.5rem;
     padding-top: 1rem;
+}
+
+button:hover, input:hover {
+  opacity: .85;
 }
 
 @media screen and (min-width: 700px) {
