@@ -39,7 +39,7 @@
     todoNode.appendChild(markToDoButton);
 
     return todoNode;
-  };
+  };  
 
   // this creates a sort button and appends it to the form element
   var createSortButton = function() {
