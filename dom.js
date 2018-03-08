@@ -8,7 +8,7 @@
 
   var state = [
     { id: -3, description: 'first todo', done: false },
-    { id: -2, description: 'second todo', done: true },
+    { id: -2, description: 'second todo', done: false },
     { id: -1, description: 'third todo', done: false },
   ]; // this is our initial todoList
 
@@ -45,18 +45,12 @@
 
     return todoNode;
   };
-
-  // bind create todo form
+ 
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
-      // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-      // what does event.preventDefault do?
-      // what is inside event.target?
-
-      var description = '?'; // event.target ....
-
-      // hint: todoFunctions.addTodo
-      var newState = []; // ?? change this!
+      event.preventDefault();   
+      var newState = todoFunctions.addTodo(state, event.target[0].value);
+      this.reset(); // clears from
       update(newState);
     });
   }
