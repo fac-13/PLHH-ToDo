@@ -50,7 +50,7 @@
       var newState = todoFunctions.sortTodos(state, (a, b) => b.done - a.done);
       update(newState);
     });
-    addTodoForm.appendChild(sortItems);
+    document.getElementById('js-sortby').appendChild(sortItems);
   }
  
   // 

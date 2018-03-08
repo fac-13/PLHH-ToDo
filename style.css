@@ -118,6 +118,7 @@ li span {
   border: none;
   padding: 1rem;
   margin-right: 6rem;
+  font-size: 1rem;
 }
 
 .list__submit {
@@ -137,10 +138,32 @@ li span {
   /* IE 10, Fx 16+, Op 12.1+ */
   height: 2.5rem;
   line-height: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+.button__sortby button {
+    background-color: #ff7f50;
+    color: #2f3542;
+    border: none;
+    float: right;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+}
+
+.heading {
+    float: left;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+    padding-top: 1rem;
 }
 
 @media screen and (min-width: 700px) {
   .inner-wrapper {
-    min-width: 50%;
+    max-width: 50%;
   }
 }
