@@ -12,8 +12,12 @@
   // get highest id of states
   if (state.length > 0) {
     var copyOfState = JSON.parse(JSON.stringify((state)));
-    var lastTodoItem = copyOfState.sort((a, b) => a.id - b.id).pop();
+    var lastTodoItem = copyOfState.sort(sortMarked).pop();
     highestId = lastTodoItem.id;
+  }
+
+  function sortMarked(a, b) {
+    return a.id - b.id
   }
   
 
