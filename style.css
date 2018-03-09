@@ -169,6 +169,10 @@ button:hover, input:hover {
   opacity: .85;
 }
 
+button, input {
+  outline:none
+}
+
 @media screen and (min-width: 700px) {
   .inner-wrapper {
     max-width: 50%;
