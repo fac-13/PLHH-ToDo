@@ -11,8 +11,10 @@
   var highestId = 0;
   // get highest id of states
   if (state.length > 0) {
-    var copyOfState = [...state];
-    var lastTodoItem = copyOfState.sort((a, b) => a.id - b.id).pop()
+    var copyOfState = JSON.parse(JSON.stringify((state)));
+    var lastTodoItem = copyOfState.sort(function(a, b) {
+      return a.id - b.id;
+    }).pop();
     highestId = lastTodoItem.id;
   }
   
@@ -61,7 +63,7 @@
     sortItems.appendChild(document.createTextNode('Sort by incomplete'));
     sortItems.addEventListener('click', function(event) {
       event.preventDefault();
-      var newState = todoFunctions.sortTodos(state, (a, b) => a.done - b.done);
+      var newState = todoFunctions.sortTodos(state, todoFunctions.sortByDone);
       update(newState);
     });
     document.getElementById('js-sortby').appendChild(sortItems);
@@ -74,7 +76,6 @@
       if (event.target[0].value.trim() !== '') {
         highestId++; // increment id of new node to be created
         var newState = todoFunctions.addTodo(state, event.target[0].value.trim(), highestId);
-        // console.log(event.target[0].value.trim());
         this.reset(); // clears from
         update(newState);
       } else {

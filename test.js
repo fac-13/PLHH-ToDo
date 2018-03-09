@@ -214,3 +214,11 @@ test("sortTodos", function(t) {
   );
   t.end();
 });
+
+test("Test objects with done properties equal to true will be last in array", function (t) {
+  var arrOfObj = [ { done: true }, { done: false }, { done: true }, { done: false }, { done: false } ];
+  var actual = arrOfObj.sort(logic.sortByDone);
+  var expected = [ { done: false }, { done: false }, { done: false }, { done: true }, { done: true } ];
+  t.deepEquals(actual, expected, 'Should move all true, done objects to the end off array');
+  t.end();
+});

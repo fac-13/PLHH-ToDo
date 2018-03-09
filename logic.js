@@ -49,6 +49,11 @@ var todoFunctions = {
     return todosCopy.sort(sortFunction);
 
   },
+
+  // SORTS: done todos will be pushed to bottom of array
+  sortByDone: function(a, b) {
+      return a.done - b.done;
+  }
 };
 
 if (typeof module !== 'undefined') {
