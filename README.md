@@ -13,9 +13,9 @@ It has satisfied the following **user stories** (for the disorganised person):
 ALSO we have managed to complete some **stretch goals**! 🎖
 - [x] Local storage has been used so even if the user refreshes the page they can still see their todos
 - [x] A sort by button: which sorts the to-dos still needed to be done (and the to-dos marked as done is shuffled to the bottom)
+- [x] Edit the to-dos so that the user can amend them if the task changes (and is still saved to local storage)
 
 Stretch goals we discussed for the future:
-- [ ] Edit the to-dos so that the user can amend them if the task changes
 - [ ] Click on any part of a to-do to mark it as complete so that it's easier for them to check to-dos off
 - [ ] Conditional sort button: only show the sort by doneness button if to do has more than two items
 - [ ] Mark items with high/medium/low priority and sort by priority
@@ -42,6 +42,9 @@ Before lunch we completed the tasks and did a code review 🤜🤛
 After lunch we switched the pairs around again. One pair focused on the CSS styling and HTML refactoring (so that we had an 💯 accessibility score), whilst the other pair focused on making sort-by button, and linking the sortby function in logic.js to the DOM. The latter pair also completed the stretch goal involving local storage (involving re-writing the function that generated id's to prevent duplicate id's after refresh.)
 
 At the end of the day we explained all the code to each other, made sure the main issues were resolved and there were no merge conflicts, and high-fived 👋
+
+### Day three
+We added tags to the issues, then discussed as a group how to split the issues and who would fix which issues. One pair also managed to complete the stretch goal of being able to edit the to-dos description (and it is still saved to local storage)
 
 ## What we did well
 - TDD methodology, we kept to a strict concept of doing the tests first before writing the functions
