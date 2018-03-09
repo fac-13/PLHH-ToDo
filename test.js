@@ -306,3 +306,11 @@ test("sortTodos", function(t) {
   t.deepEquals(actual, expected, "Function does not mutate original state");
   t.end();
 });
+
+test("Test objs with done properties equal to true will be last in array", function (t) {
+  var arrOfObj = [ { done: true }, { done: false }, { done: true }, { done: false }, { done: false } ];
+  var actual = arrOfObj.sort(logic.sortByDone);
+  var expected = [ { done: false }, { done: false }, { done: false }, { done: true }, { done: true } ];
+  t.deepEquals(actual, expected, 'Should move all true, done objects to the end off array');
+  t.end();
+});
