@@ -33,7 +33,6 @@ var todoFunctions = {
   // MARKTODO: marks the item as done
   markTodo: function(todos, idToMark) {
     var todosCopy = this.cloneArrayOfObjects(todos);
-    console.log(todosCopy);
     return todosCopy.map(function(item) {
       if (item.id === idToMark) {
         item.done = !item.done;
