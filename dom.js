@@ -26,7 +26,12 @@
     // add span holding description
     var descriptionSpan = document.createElement('span');
     descriptionSpan.appendChild(document.createTextNode(item.description));
+    descriptionSpan.setAttribute('contenteditable', 'true');
     todoNode.appendChild(descriptionSpan);
+    descriptionSpan.addEventListener('focusout', function(event) {
+      item.description = event.target.innerText;
+      update(state);
+    });
     
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
