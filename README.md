@@ -50,3 +50,7 @@ At the end of the day we explained all the code to each other, made sure the mai
 - We decided to work from a develop branch - and smaller branches would be merged into the develop branch. Only on the final hour did we merge the develop branch into the master branch.
 - We regularly met up and explained the code to each other.
 - Everyone would review and approve the pull request before the last person to review would merged the branch.
+
+## What we struggled with 
+- Adopting state ids for the local storage
+- Updating state after making the description editable
