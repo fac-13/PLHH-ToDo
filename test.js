@@ -173,9 +173,10 @@ test("sortTodos", function(t) {
     { id: -8, description: "h this is done", done: true },
     { id: -9, description: "i this is not done", done: false }
   ];
-
   t.deepEquals(
-    logic.sortTodos(sortState, (a, b) => a.done - b.done),
+    logic.sortTodos(sortState, function(a, b) {
+      return a.done - b.done;
+    }),
     [
       { id: -1, description: "a this is not done", done: false },
       { id: -3, description: "c this is not done", done: false },
@@ -190,12 +191,18 @@ test("sortTodos", function(t) {
     "Should return array sorted by done status."
   );
   t.deepEquals(
-    logic.sortTodos(sortState, (a, b) => a.done - b.done).length,
+    logic.sortTodos(sortState, function(a, b) {
+      return a.done - b.done;
+    }).length,
     sortState.length,
     "Function should return array of same length as input array."
   );
   t.deepEquals(
-    Array.isArray(logic.sortTodos(sortState, (a, b) => a.done - b.done)),
+    Array.isArray(
+      logic.sortTodos(sortState, function(a, b) {
+        return a.done - b.done;
+      })
+    ),
     true,
     "Function should return array."
   );
