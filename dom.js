@@ -58,9 +58,7 @@
     sortItems.appendChild(document.createTextNode('Sort by incomplete'));
     sortItems.addEventListener('click', function(event) {
       event.preventDefault();
-      var newState = todoFunctions.sortTodos(state, function(a, b) {
-        return a.done - b.done;
-      });
+      var newState = todoFunctions.sortTodos(state, todoFunctions.sortByDone);
       update(newState);
     });
     document.getElementById('js-sortby').appendChild(sortItems);
