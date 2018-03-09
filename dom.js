@@ -71,7 +71,6 @@
       if (event.target[0].value.trim() !== '') {
         highestId++; // increment id of new node to be created
         var newState = todoFunctions.addTodo(state, event.target[0].value.trim(), highestId);
-        // console.log(event.target[0].value.trim());
         this.reset(); // clears from
         update(newState);
       } else {
