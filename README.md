@@ -6,7 +6,7 @@ The amazing PLHH team have come together to present to you... [the to do app](ht
 It has satisfied the following **user stories** (for the disorganised person):
 - [x] They can enter tasks they need to do in a web page so they don't forget
 - [x] They can view the tasks added in a list to plan their day
-- [x] Mark tasks as complete so they can focus on the tasks left (and be able to mark it as uncomplete afterwards too)
+- [x] Mark tasks as complete so they can focus on the tasks left (and be able to mark it as incomplete afterwards too)
 - [x] They can delete the task completely from the list
 - [x] The buttons are pretty large so they can hit the right target with their thumb 👍
 
