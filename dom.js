@@ -55,7 +55,7 @@
   // this creates a sort button and appends it to the form element
   var createSortButton = function() {
     var sortItems = document.createElement('button');
-    sortItems.appendChild(document.createTextNode('Sort by uncomplete'));
+    sortItems.appendChild(document.createTextNode('Sort by incomplete'));
     sortItems.addEventListener('click', function(event) {
       event.preventDefault();
       var newState = todoFunctions.sortTodos(state, function(a, b) {
@@ -70,10 +70,15 @@
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
       event.preventDefault(); 
-      highestId++; // increment id of new node to be created
-      var newState = todoFunctions.addTodo(state, event.target[0].value, highestId);
-      this.reset(); // clears from
-      update(newState);
+      if (event.target[0].value.trim() !== '') {
+        highestId++; // increment id of new node to be created
+        var newState = todoFunctions.addTodo(state, event.target[0].value.trim(), highestId);
+        // console.log(event.target[0].value.trim());
+        this.reset(); // clears from
+        update(newState);
+      } else {
+        this.reset();
+      }
     });
   }
 
