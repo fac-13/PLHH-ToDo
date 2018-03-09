@@ -30,8 +30,6 @@
     todoNode.appendChild(descriptionSpan);
     descriptionSpan.addEventListener('focusout', function(event) {
       item.description = event.target.innerText;
-      console.log(event.target.innerText);
-      console.log('yep!');
       update(state);
     });
     
